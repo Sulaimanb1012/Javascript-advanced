@@ -10,9 +10,14 @@ const producten = [
 ];
 
 // TODO: Filter producten onder €500 die beginnen met 'm'
-const gefilterdeMproducten = /* jouw code hier */
+const gefilterdeMproducten = producten.filter(product => product.prijs < 500 && product.naam.toLocaleLowerCase().startsWith('m')); /* jouw code hier */
 console.log('Producten onder €500 beginnend met m:', gefilterdeMproducten);
 
 // TODO: Filter Electronics tussen €50 en €100
 const electronicsRange = /* jouw code hier */
 console.log('Electronics tussen €50-€100:', electronicsRange);
+
+
+producten.filter(product =>
+    product.prijs < 500 && product.naam.toLowerCase().startsWith('m')
+);

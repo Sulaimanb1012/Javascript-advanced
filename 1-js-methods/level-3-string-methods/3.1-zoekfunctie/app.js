@@ -6,7 +6,7 @@ console.log('Alle films:', films);
 
 function zoekFilms(films, zoekterm) {
     // TODO: Return films die de zoekterm bevatten (case-insensitive)
-    return /* jouw code hier */;
+    return films.filter(film => film.toLowerCase().includes(zoekterm.toLowerCase())); /* jouw code hier */;
 }
 
 // Test de functie

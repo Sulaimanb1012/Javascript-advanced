@@ -5,20 +5,21 @@ let taken = [];
 
 function voegTaakToe() {
     const input = document.getElementById('nieuwe-taak');
-    const taakTekst = /* jouw code hier - haal waarde op en trim */;
+    const taakTekst = input.value.trim();/* jouw code hier - haal waarde op en trim */;
     
     if (taakTekst === '') return;
     
     // TODO: Voeg taak toe aan array
     taken.push({
         id: Date.now(),
-        tekst: /* jouw code hier */,
+        tekst: taakTekst/* jouw code hier */,
         voltooid: false
     });
     
     // TODO: Sla taken op in localStorage
     /* jouw code hier - gebruik JSON.stringify */;
-    
+   localStorage.setItem('taken', JSON.stringify(taken));
+
     // Maak input leeg en update UI
     input.value = '';
     toonTaken();
@@ -26,11 +27,11 @@ function voegTaakToe() {
 
 function laadTaken() {
     // TODO: Haal taken op uit localStorage
-    const opgeslagenTaken = /* jouw code hier */
+    const opgeslagenTaken = localStorage.getItem('taken');/* jouw code hier */
     
     if (opgeslagenTaken) {
         // TODO: Parse JSON naar array
-        taken = /* jouw code hier */
+        taken = JSON.parse(opgeslagenTaken);/* jouw code hier */
     }
 }
 
@@ -40,7 +41,7 @@ function toonTaken() {
     // TODO: Genereer HTML voor alle taken
     const takenHTML = taken.map(taak => `
         <div class="taak">
-            ${/* jouw code hier - taak tekst */}
+            ${ taak.tekst/* jouw code hier - taak tekst */}
             <button onclick="verwijderTaak(${taak.id})">🗑️</button>
         </div>
     `).join('');
@@ -50,12 +51,20 @@ function toonTaken() {
 
 function verwijderTaak(taakId) {
     // TODO: Verwijder taak uit array
-    taken = /* jouw code hier - gebruik filter */;
-    
+    /* jouw code hier - gebruik filter */;
+     taken = taken.filter(taak => taak.id !== taakId);
     // TODO: Sla taken op en update UI
+  
+   
     /* jouw code hier */;
+     localStorage.setItem('taken', JSON.stringify(taken));
     toonTaken();
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    laadTaken();
+    toonTaken();
+});
 
 // TODO: Initialisatie bij pagina laden
 /* jouw code hier */;

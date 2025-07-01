@@ -9,13 +9,13 @@ const producten = [
 ];
 
 // TODO: Zoek het product met naam 'laptop'
-const laptop = /* jouw code hier */
+const laptop =  producten.find(product  => product.naam === "laptop")
 console.log('Laptop product:', laptop);
 
 // TODO: Zoek de index van product 'muis'
-const muisIndex = /* jouw code hier */
+const muisIndex = producten.findIndex(product  => product.naam === "muis")
 console.log('Index van muis:', muisIndex);
 
 // TODO: Zoek het eerste product boven €200
-const duurProduct = /* jouw code hier */
+const duurProduct = producten.find(product => product.prijs > 200); /* jouw /* jouw code hier */
 console.log('Eerste dure product:', duurProduct);

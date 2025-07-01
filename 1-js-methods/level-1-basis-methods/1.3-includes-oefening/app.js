@@ -8,12 +8,13 @@ const zoekKleur = prompt('Voer een kleur in:') || 'blauw';
 console.log('Gezochte kleur:', zoekKleur);
 
 // TODO: Check of de kleur in de array staat
-const gevonden =
+const gevonden = kleuren.includes(zoekKleur)
   /* jouw code hier */
 
   console.log('Kleur gevonden:', gevonden);
 
 // Bonus: Case-insensitive check
-const gevondenCaseInsensitive =
-  /* jouw code hier */
-  console.log('Case-insensitive gevonden:', gevondenCaseInsensitive);
+const gevondenCaseInsensitive = kleuren.some(
+  (kleur) => kleur.toLowerCase() === zoekKleur.toLowerCase()
+);
+console.log('Case-insensitive gevonden:', gevondenCaseInsensitive);

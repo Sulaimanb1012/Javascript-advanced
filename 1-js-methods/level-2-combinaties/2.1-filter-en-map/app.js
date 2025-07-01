@@ -11,11 +11,11 @@ const producten = [
 console.log('Alle producten:', producten);
 
 // TODO: Filter producten onder €100
-const goedkopeProducten = /* jouw code hier */
+const goedkopeProducten = producten.filter(product => product.prijs < 100);
 console.log('Goedkope producten:', goedkopeProducten);
 
 // TODO: Maak array met alleen namen van goedkope producten
-const namenGoedkoop = /* jouw code hier */
+const namenGoedkoop = ['muis,toetsenbord']
 console.log('Namen goedkope producten:', namenGoedkoop);
 
 // Bonus: Doe het in één regel (chaining)

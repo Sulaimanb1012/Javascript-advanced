@@ -11,11 +11,11 @@ const producten = [
 console.log('Originele volgorde:', producten);
 
 // TODO: Sorteer op prijs van laag naar hoog
-const gesorteerdeProducten = /* jouw code hier */
+const gesorteerdeProducten = producten.sort((a, b) => a.prijs - b.prijs);                                 
 console.log('Gesorteerd op prijs (laag-hoog):', gesorteerdeProducten);
 
 // TODO: Sorteer op naam alfabetisch
-const gesorteerdeNamen = /* jouw code hier */
+const gesorteerdeNamen = producten.sort((a, b) => a.naam.localeCompare(b.naam)); /* jouw code hier */
 console.log('Gesorteerd op naam:', gesorteerdeNamen);
 
 // Bonus: Sorteer cursussen op duration
