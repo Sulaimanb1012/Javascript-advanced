@@ -58,13 +58,14 @@ const students = [
 // }
 
 function toonActieveStudenten() {
-  
+  return array.filter(student => student.actief == true);
   // 📝 WAT MOET JE DOEN:
   // 1. Filter de students array op studenten waar actief === true
   // 2. Toon alleen die gefilterde studenten (gebruik dezelfde HTML als hierboven)
   //
   // 💡 TIP: Gebruik array.filter() en dan dezelfde logica als toonAlleStudenten()
 }
+toonActieveStudenten();
 
 function toonTopStudenten() {
   // 📝 WAT MOET JE DOEN:
