@@ -41,7 +41,7 @@ const students = [
   },
 ];
 
-// function toonAlleStudenten() {
+function toonAlleStudenten() {
 //   // 📝 WAT MOET JE DOEN:
 //   // 1. Loop door de hele 'students' array
 //   // 2. Maak voor elke student een HTML article element
@@ -55,19 +55,22 @@ const students = [
 //   //     📚 Frontend Development<br>
 //   //     📊 Cijfer: 8.5 | Status: ✅ Actief
 //   // </article>
-// }
+}
 
 function toonActieveStudenten() {
-  return array.filter(student => student.actief == true);
+  const gefilterd= students.filter(student => student.actief == true);
+  console.log(gefilterd);
+
   // 📝 WAT MOET JE DOEN:
   // 1. Filter de students array op studenten waar actief === true
   // 2. Toon alleen die gefilterde studenten (gebruik dezelfde HTML als hierboven)
   //
   // 💡 TIP: Gebruik array.filter() en dan dezelfde logica als toonAlleStudenten()
 }
-toonActieveStudenten();
+  toonActieveStudenten();
 
 function toonTopStudenten() {
+  return students.filter(student => student >=8.0)
   // 📝 WAT MOET JE DOEN:
   // 1. Filter de students array op studenten met cijfer >= 8.0
   // 2. Toon alleen die gefilterde studenten
