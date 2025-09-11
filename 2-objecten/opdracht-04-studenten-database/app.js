@@ -58,6 +58,7 @@ const students = [
 // }
 
 function toonActieveStudenten() {
+  
   // 📝 WAT MOET JE DOEN:
   // 1. Filter de students array op studenten waar actief === true
   // 2. Toon alleen die gefilterde studenten (gebruik dezelfde HTML als hierboven)
