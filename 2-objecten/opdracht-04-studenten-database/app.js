@@ -109,4 +109,4 @@ const topStudenten = students.filter(student => student.cijfer >=8);
 }
 toonTopStudenten();
 
-// 🚀 START DE APPLICATIE - roep deze aan als de pagina laadt
+// 🚀 START DE APPLICATIE - roep deze aan als de pagina laad
