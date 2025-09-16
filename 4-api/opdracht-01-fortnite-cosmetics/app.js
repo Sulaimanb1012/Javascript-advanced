@@ -1,14 +1,16 @@
 fetch('https://fortnite-api.com/v2/cosmetics/new')
-  .then(response => response.json())
+  .then(cosmetic => cosmetic.json())
   .then(cosmetic => {
+
     const container = document.getElementById('cosmetics');
     
-    for (let cosmetics of cosmetics.items) {
+    for (let cosmetics of cosmetic.data.items.cars) {
+        console.log(cosmetics);
       const div = document.createElement('div');
       div.innerHTML = `
         <h3>${cosmetics.name}</h3>
         <p>Type: ${cosmetics.type.displayValue}</p>
-        <img src="${cosmetics.images.icon}" alt="${item.name}" width="100">
+        <img src="${cosmetics.images.cars}" alt="${cosmetics.name}" width="100">
       `;
       div.style.border = '1px solid #ccc';
       div.style.margin = '10px';
