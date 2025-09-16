@@ -2,7 +2,6 @@ fetch('https://restcountries.com/v3.1/all')
   .then(countries => countries.json())
   .then(countries => {
 
-
     const container = document.getElementById('countries');
     
     for (let country of countries.data.city) {
